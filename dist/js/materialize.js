@@ -2407,7 +2407,8 @@ if (Vel) {
             }
           }); // End Velocity
         }
-
+        // handle image for get lg img 
+        if(origin.data('lg-src')) origin.attr('src',origin.data('lg-src'))
         // Handle Exit triggers
         $(window).on('scroll.materialbox', function () {
           if (overlayActive) {
@@ -5807,7 +5808,7 @@ if (Vel) {
 
     options = $.extend(defaults, options);
 
-    $index = 0;
+    var $index = 0;
     return this.each(function () {
       var $uniqueId = Materialize.guid(),
           $this = $(this),
@@ -9499,6 +9500,7 @@ if (Vel) {
             }
             el.style[xform] = alignment + ' translateX(' + -delta / 2 + 'px)' + ' translateX(' + dir * options.shift * tween * i + 'px)' + ' translateZ(' + options.dist * tween + 'px)';
             el.style.zIndex = 0;
+            var tweenedOpacity,zTranslation ;
             if (options.fullWidth) {
               tweenedOpacity = 1;
             } else {
@@ -9662,7 +9664,7 @@ if (Vel) {
         }
 
         function drag(e) {
-          var x, delta, deltaY;
+          var x, delta, deltaY,y;
           if (pressed) {
             x = xpos(e);
             y = ypos(e);
