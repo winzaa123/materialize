@@ -31,6 +31,11 @@
     </a>
 </p>
 
+## Logs
+
+- add `data-lg-src` in `materialbox` 
+- global variable in `strict mode`
+
 ## Table of Contents
 - [Quickstart](#quickstart)
 - [Documentation](#documentation)
