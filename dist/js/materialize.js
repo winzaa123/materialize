@@ -9647,6 +9647,9 @@ if (Vel) {
 
         function tap(e) {
           // Fixes firefox draggable image bug
+          if( $(e.target).is('input')){
+            return ;
+          }
           if (e.type === 'mousedown' && $(e.target).is('img')) {
             e.preventDefault();
           }
