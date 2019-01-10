@@ -32,7 +32,7 @@
 </p>
 
 ## Logs
-
+- except input in `Carousel`
 - add `data-lg-src` in `materialbox` 
 - global variable in `strict mode`
 
